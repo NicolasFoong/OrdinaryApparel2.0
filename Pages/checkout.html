@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Checkout</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/CSS/style.css">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  <!-- **** NEED ADD RESPONSIVE TO NAV ****-->
+    <!-- Container for Navbar-->
+    <nav class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/Index.html">Ordinary Apparel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link active-nav-custom dropdown-toggle nav-link-custom" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Account
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/Pages/login.html">Sign In</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/Pages/registration.html">Sign Up</a></li>
+              </ul>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Pages/products.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Pages/checkout.html">Checkout</a>
+            </li>
+            <li class="nav-item dropdown">
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="wheel-card-row1" class="container py-5 my-5">
+      <h1 class="text-center fs-3"><strong>Checkout</strong></h1>
+      <hr>      
+      <form action="process_checkout.php" method="POST">
+           <!-- Content -->
+    <main class="container-md py-5">
+      <section class="row g-5">
+        <!-- Cart -->
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <!-- Your Cart Text -->
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Shopping Cart</span>
+            <span class="badge bg-primary rounded-pill">3</span>
+          </h4>
+          <!-- Items -->
+          <ul class="list-group mb-3">
+            <!--Vintage Disney x Nascar Jacket -->
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div class="d-flex gap-3">
+                <img
+                  src="/Images/drip/Goofy.jpg"
+                  alt="Vintage Disney x Nascar Jacket"
+                  width="125px"
+                />
+                <div>
+                  <h6 class="my-0">Vintage Disney x Nascar Jacket</h6>
+                </div>
+              </div>
+              <span class="text-body-secondary my-auto">$150</span>
+            </li>
+            <!-- 90's Nike Urban Jungle -->
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div class="d-flex gap-3">
+                <img
+                  src="/images/drip/UrbanJungleNike.jpg"
+                  alt="sunlite emoji bell"
+                  width="125px"
+                />
+                <div>
+                  <h6 class="my-0">90's Nike Urban Jungle</h6>
+                </div>
+              </div>
+              <span class="text-body-secondary my-auto">$100</span>
+            </li>
+            <!-- 2000's Warriors Larry Hughes -->
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div class="d-flex gap-3">
+                <img
+                  src="/images/drip/WarriorsJersey.jpg"
+                  alt="topeak alien ii multitool"
+                  width="125x"
+                />
+                <div>
+                  <h6 class="my-0">2000's Warriors Larry Hughes</h6>
+                </div>
+              </div>
+              <span class="text-body-secondary my-auto">$125</span>
+            </li>
+           
+            <!-- Total -->
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (USD)</span>
+              <strong>$375</strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Billing Form -->
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Billing Address</h4>
+          <form>
+            <div class="row g-3">
+              <!-- First Name -->
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Trend"
+                  required
+                />
+              </div>
+              <!-- Last Name -->
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Setter"
+                  required
+                />
+              </div>
+              <!-- Email -->
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="YayArea@email.com"
+                  required
+                />
+              </div>
+              <!-- Address -->
+              <div class="col-12">
+                <label for="address" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="1234 Main St"
+                  required
+                />
+              </div>
+             
+              <!-- Country -->
+              <div class="col-md-5">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" required>
+                  <option value="">Choose...</option>
+                </select>
+              </div>
+              <!-- State -->
+              <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" required>
+                  <option value="">Choose...</option>
+                </select>
+              </div>
+              <!-- Zip Code -->
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Zip</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="zip"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <!-- Shipping Address -->
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="same-address"
+              />
+              <label class="form-check-label" for="same-address"
+                >Shipping address is the same as my billing address</label
+              >
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="save-info" />
+              <label class="form-check-label" for="save-info"
+                >Save this information for next time</label
+              >
+            </div>
+            <hr class="my-4" />
+
+            <!-- Payment -->
+            <h4 class="mb-3">Payment</h4>
+            <!-- Payment Type -->
+            <div class="my-3">
+              <div class="form-check">
+                <input
+                  id="credit"
+                  name="paymentMethod"
+                  type="radio"
+                  class="form-check-input"
+                  checked
+                  required
+                />
+                <label class="form-check-label" for="credit">Credit card</label>
+              </div>
+              <div class="form-check">
+                <input
+                  id="debit"
+                  name="paymentMethod"
+                  type="radio"
+                  class="form-check-input"
+                  required
+                />
+                <label class="form-check-label" for="debit">Debit card</label>
+              </div>
+              </div>
+            </div>
+
+            <!-- Card Info -->
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <label for="cc-name" class="form-label">Name on card</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cc-name"
+                  placeholder=""
+                  required
+                />
+                <small class="text-body-secondary"
+                  >Full name as displayed on card</small
+                >
+              </div>
+
+              <div class="col-md-6">
+                <label for="cc-number" class="form-label"
+                  >Credit card number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cc-number"
+                  placeholder=""
+                  required
+                />
+              </div>
+
+              <div class="col-md-3">
+                <label for="cc-expiration" class="form-label">Expiration</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cc-expiration"
+                  placeholder=""
+                  required
+                />
+              </div>
+
+              <div class="col-md-3">
+                <label for="cc-cvv" class="form-label">CVV</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cc-cvv"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <!-- submit button -->
+            <button class="w-100 btn btn-primary btn-lg" type="submit">
+              Continue to checkout
+            </button>
+          </form>
+        </div>
+      </section>
+          
+
+
+  </main>
+  
+  <footer>
+    <!-- place footer here -->
+     <!-- Copyright -->
+   <div class="text-center p-4">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+      >OrdinaryApparel.com</a
+    >
+  </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
