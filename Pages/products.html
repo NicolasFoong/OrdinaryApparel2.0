@@ -52,7 +52,14 @@
               <input class="form-control me-sm-2" type="search" placeholder="Search">
               <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
-            <button class="btn btn-warning" onclick="logout()">Logout</button>
+            <button class="btn btn-warning d-none" id="logoutBtn" onclick="logout()">Logout</button>
+            <script>
+                const logoutBtn = document.getElementById("logoutBtn");
+
+                if (!isLoggedIn()) {
+                logoutBtn.classList.remove("d-none");
+                }
+            </script>
           </div>
         </div>
       </nav>

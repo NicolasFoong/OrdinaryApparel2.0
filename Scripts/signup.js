@@ -35,5 +35,6 @@ signupForm.onsubmit = async function (event) {
   } else {
     // Time to actually process the login using the function from auth.js!
     await login({ username, password });
+    window.location.assign("/Pages/products.html"); // redirect to products page on successful login
   }
 };

@@ -14,7 +14,7 @@
   <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
   <script src="../Scripts/auth.js"></script>
   <script>
-    if (isLoggedIn() === true) window.location.replace("/Pages/products.html");
+    if (isLoggedIn()) window.location.replace("/Pages/products.html");
   </script>
 
 </head>
