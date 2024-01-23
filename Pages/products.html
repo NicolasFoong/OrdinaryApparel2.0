@@ -61,8 +61,8 @@
             <script>
                 const logoutBtn = document.getElementById("logoutBtn");
 
-                if (!isLoggedIn()) {
-                logoutBtn.classList.remove("d-none");
+                if (isLoggedIn()) {
+                    logoutBtn.classList.remove("d-none");
                 }
             </script>
           </div>
