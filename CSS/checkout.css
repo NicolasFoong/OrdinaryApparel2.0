@@ -1,0 +1,160 @@
+/* Typography */
+body {
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+/* Spacing and Margins */
+.container-md {
+  margin-top: 20px;
+}
+
+/* Color Scheme */
+body {
+  background-color: #f8f9fa;
+}
+
+.text-primary {
+  color: #007bff;
+}
+
+/* Borders and Shadows */
+.form-control {
+  border: 1px solid #ced4da;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header Styles */
+header {
+  padding: 15px 0;
+  color: #ffffff;
+}
+
+.navbar-brand, .navbar-toggler-icon {
+  color: #ffffff;
+}
+
+/* Main Content Styles */
+#wheel-card-row1 {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Cart Styles */
+.list-group-item {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Form Styles */
+.form-label {
+  font-weight: bold;
+}
+
+.form-check-label {
+  font-weight: normal;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #343a40;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-toggler-icon {
+    background-color: #007bff;
+  }
+}
+
+/* Animations */
+/* Add a fade-in animation to the entire page */
+body {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add a slide-in animation to the form */
+#wheel-card-row1 form {
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add a pulse animation to the total amount */
+.pulse {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+
+/* Add a hover animation to buttons */
+.btn-primary:hover {
+  animation: btnHover 0.5s ease-in-out;
+}
+
+@keyframes btnHover {
+  transform: scale(1.1);
+}
