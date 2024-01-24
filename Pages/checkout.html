@@ -9,7 +9,7 @@
 
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="/CSS/checkout.css">
 
 </head>
 
@@ -17,42 +17,37 @@
   <header>
     <!-- place navbar here -->
   <!-- **** NEED ADD RESPONSIVE TO NAV ****-->
-    <!-- Container for Navbar-->
-    <nav class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/Index.html">Ordinary Apparel</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link active-nav-custom dropdown-toggle nav-link-custom" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Account
+      <!-- Container for Navbar-->
+      <nav class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/Index.html">Ordinary Apparel</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item dropdown">
+                <a href="login.html" class="nav-link active-nav-custom nav-link-custom" role="button" aria-expanded="false">
+                  Login
               </a>
-              <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/Pages/login.html">Sign In</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/Pages/registration.html">Sign Up</a></li>
-              </ul>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Pages/products.html">Gallery</a>
+              
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Pages/checkout.html">Checkout</a>
-            </li>
-            <li class="nav-item dropdown">
-              </div>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-sm-2" type="search" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-          </form>
+              <li class="nav-item">
+                <a class="nav-link" href="/Pages/products.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Pages/checkout.html">Checkout</a>
+              </li>
+              <li class="nav-item dropdown">
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-sm-2" type="search" placeholder="Search">
+              <button class="btn btn-secondary" type="submit">Search</button>
+            </form>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
   </header>
 
   <main>
@@ -61,19 +56,19 @@
       <hr>      
       <form action="process_checkout.php" method="POST">
            <!-- Content -->
-    <main class="container-md py-5">
+    <div class="container-md py-5">
       <section class="row g-5">
         <!-- Cart -->
         <div class="col-md-5 col-lg-4 order-md-last">
           <!-- Your Cart Text -->
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-primary">Shopping Cart</span>
-            <span class="badge bg-primary rounded-pill">3</span>
+            <span class="badge bg-primary rounded-pill" id="cartItemCount">3</span>
           </h4>
-          <!-- Items -->
-          <ul class="list-group mb-3">
-            <!--Vintage Disney x Nascar Jacket -->
-            <li class="list-group-item d-flex justify-content-between lh-sm">
+          <!-- Items List -->
+          <ul id="cartItems" class="list-group mb-3">
+            <!-- Vintage Disney x Nascar Jacket -->
+            <li class="list-group-item d-flex justify-content-between lh-sm" data-price="$150">
               <div class="d-flex gap-3">
                 <img
                   src="/Images/drip/Goofy.jpg"
@@ -87,11 +82,11 @@
               <span class="text-body-secondary my-auto">$150</span>
             </li>
             <!-- 90's Nike Urban Jungle -->
-            <li class="list-group-item d-flex justify-content-between lh-sm">
+            <li class="list-group-item d-flex justify-content-between lh-sm" data-price="$100">
               <div class="d-flex gap-3">
                 <img
                   src="/images/drip/UrbanJungleNike.jpg"
-                  alt="sunlite emoji bell"
+                  alt="Nike Sweater"
                   width="125px"
                 />
                 <div>
@@ -101,11 +96,11 @@
               <span class="text-body-secondary my-auto">$100</span>
             </li>
             <!-- 2000's Warriors Larry Hughes -->
-            <li class="list-group-item d-flex justify-content-between lh-sm">
+            <li class="list-group-item d-flex justify-content-between lh-sm" data-price="$125">
               <div class="d-flex gap-3">
                 <img
                   src="/images/drip/WarriorsJersey.jpg"
-                  alt="topeak alien ii multitool"
+                  alt="Warriors Jersey"
                   width="125x"
                 />
                 <div>
@@ -114,11 +109,11 @@
               </div>
               <span class="text-body-secondary my-auto">$125</span>
             </li>
-           
+
             <!-- Total -->
             <li class="list-group-item d-flex justify-content-between">
               <span>Total (USD)</span>
-              <strong>$375</strong>
+              <strong>$<span id="totalAmount" class="pulse">375.00</span></strong>
             </li>
           </ul>
         </div>
@@ -325,8 +320,11 @@
     >
   </div>
   </footer>
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="/Scripts/cart.js"></script>
+</body>
+
 
 </body>
 

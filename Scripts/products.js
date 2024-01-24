@@ -29,7 +29,7 @@ async function loadProducts() {
                             <div class="card-body">
                                 <h5 class="card-title">${product.name}</h5>
                                 <p class="card-text">$${product.price.toFixed(2)}</p>
-                                <a href="#" class="btn btn-dark fw-bold shadow">Add To Cart</a>
+                                <a href="#" class="btn btn-dark fw-bold shadow" onclick="addToCart(${JSON.stringify(product)})">Add To Cart</a>
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-id="${
                                   product.id
                                 }">View Item</button>
@@ -165,6 +165,21 @@ function addCommentToProduct(comment) {
                                         </div>`;
   reviewContainer.insertAdjacentHTML('beforeend', commentHtml);
 }
+
+function redirectToCheckout() {
+  // Set the window location to the checkout page URL
+  window.location.href = "/Pages/checkout.html";
+}
+// Array to store selected products
+let selectedProducts = [];
+
+
+// Function to get the selected products
+function getSelectedProducts() {
+  return selectedProducts;
+}
+
+//const selectedProducts = getSelectedProducts();
 
 function submitReviewHandler() {
   const reviewForm = document.getElementById('reviewForm');
