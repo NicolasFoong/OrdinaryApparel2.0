@@ -113,8 +113,10 @@
 
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-dark fw-bold shadow" id="addToCartBtn" onclick="redirectToCheckout()">Add to Cart</button>
+                                <!-- Inside the loop where you display products -->
+                                  <a href="#" class="btn btn-dark fw-bold shadow" onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Add To Cart</a>
 
+                                <!-- <a href="/Pages/checkout.html" class="btn btn-dark fw-bold shadow" onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Add To Cart</a> -->
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
@@ -139,6 +141,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="/Scripts/products.js"></script>
+    <script src="/Scripts/cart.js"></script>
 
 </body>
 
