@@ -82,19 +82,27 @@
           <div class="content">
             <h2>Login</h2>
             <h6>Welcome Back</h6>
+            <form id="login">
+              <p
+                  class="my-1 fs-6 text-danger d-none text-center"
+                  id="error-msg"
+                >
+                  Invalid credentials!
+                </p>
               <div class="form-group">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" id="username" name="username" required />
                 <label for="password" class="form-label">Password</label>
                 <input type="password" id="password" name="password" required />
               </div>
-              <button id="login-btn" type="submit">Login</button>
+              <button id="loginButton" type="submit">Login</button>
               <div class="d-flex align-items-center mt-3">
                 <p class="m-0 me-2">New user?</p>
                 <a href="/Pages/registration.html">
                   <button type="button" id="signup-btn">Sign Up</button>
                 </a>
               </div>
+            </form>
           </div>
         </div>
       </div>
