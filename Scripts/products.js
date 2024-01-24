@@ -1,6 +1,6 @@
 'use strict';
 
-const apiUri =  'https://ordinary-apparel2-0-backend.vercel.app/api';
+const apiUri = 'https://ordinary-apparel2-0-backend.vercel.app/api';
 //https://ordinary-apparel2-0-backend.vercel.app
 //http://localhost:3000/api
 
@@ -78,45 +78,54 @@ function productModal() {
       else productDescription.innerHTML = '';
 
       if (product.comments.length === 0) {
-        reviewContainer.innerHTML = '<p class="text-center">No reviews.</p>';
+        reviewContainer.innerHTML =
+          '<p class="text-center" id="hasReview">No reviews.</p>';
       } else {
         for (const comment of product.comments) {
-          const timestamp = () => {
-            const commentDate = new Date(comment.createdAt);
-            const nowDate = new Date();
+          addCommentToProduct(comment);
+        }
+      }
+    });
+  }
+}
 
-            function getDifferenceInDays(date1, date2) {
-              const diffInDays = Math.abs(date2 - date1);
-              return diffInDays / (1000 * 60 * 60 * 24);
-            }
+function addCommentToProduct(comment) {
+  const timestamp = () => {
+    const commentDate = new Date(comment.createdAt);
+    const nowDate = new Date();
 
-            function getDifferenceInHours(date1, date2) {
-              const diffInHrs = Math.abs(date2 - date1);
-              return diffInHrs / (1000 * 60 * 60);
-            }
+    function getDifferenceInDays(date1, date2) {
+      const diffInDays = Math.abs(date2 - date1);
+      return diffInDays / (1000 * 60 * 60 * 24);
+    }
 
-            function getDifferenceInMinutes(date1, date2) {
-              const diffInMs = Math.abs(date2 - date1);
-              return diffInMs / (1000 * 60);
-            }
+    function getDifferenceInHours(date1, date2) {
+      const diffInHrs = Math.abs(date2 - date1);
+      return diffInHrs / (1000 * 60 * 60);
+    }
 
-            function getDifferenceInSeconds(date1, date2) {
-              const diffInSecs = Math.abs(date2 - date1);
-              return diffInSecs / 1000;
-            }
+    function getDifferenceInMinutes(date1, date2) {
+      const diffInMs = Math.abs(date2 - date1);
+      return diffInMs / (1000 * 60);
+    }
 
-            const days = Math.floor(getDifferenceInDays(commentDate, nowDate));
-            const hours = Math.floor(getDifferenceInHours(commentDate, nowDate));
-            const minutes = Math.floor(getDifferenceInMinutes(commentDate, nowDate));
-            const seconds = Math.floor(getDifferenceInSeconds(commentDate, nowDate));
+    function getDifferenceInSeconds(date1, date2) {
+      const diffInSecs = Math.abs(date2 - date1);
+      return diffInSecs / 1000;
+    }
 
-            if (days > 0) return days + 'd';
-            else if (hours > 0) return hours + ' hr';
-            else if (minutes > 0) return minutes + ' min';
-            else return seconds + 's';
-          };
+    const days = Math.floor(getDifferenceInDays(commentDate, nowDate));
+    const hours = Math.floor(getDifferenceInHours(commentDate, nowDate));
+    const minutes = Math.floor(getDifferenceInMinutes(commentDate, nowDate));
+    const seconds = Math.floor(getDifferenceInSeconds(commentDate, nowDate));
 
-          const commentHtml = `<div class="col-12">
+    if (days > 0) return days + 'd';
+    else if (hours > 0) return hours + ' hr';
+    else if (minutes > 0) return minutes + ' min';
+    else return seconds + 's';
+  };
+
+  const commentHtml = `<div class="col-12">
                                             <!-- Card feed item START -->
                                             <div class="card h-100 user-card">
                                                 <!-- Card body START -->
@@ -154,11 +163,7 @@ function productModal() {
                                             </div>
                                             <!-- Card feed item END -->
                                         </div>`;
-          reviewContainer.insertAdjacentHTML('beforeend', commentHtml);
-        }
-      }
-    });
-  }
+  reviewContainer.insertAdjacentHTML('beforeend', commentHtml);
 }
 
 function submitReviewHandler() {
@@ -183,7 +188,13 @@ function submitReviewHandler() {
       method: 'POST',
       body: JSON.stringify({ text, name, productId }),
     });
-    const comment = await res.json();
-    console.log(comment);
+    const { comment } = await res.json();
+
+    reviewText.value = '';
+
+    const hasReview = document.getElementById('hasReview');
+    if (hasReview?.textContent == 'No reviews.')
+      document.getElementById('reviewContainer').innerHTML = '';
+    addCommentToProduct(comment);
   });
 }
