@@ -43,7 +43,7 @@ h4 {
     max-width: 350px;
     aspect-ratio: 1 / 1;
     padding: var(--a) var(--a) 0 0;
-    outline: 8px solid #ffd199;
+    outline: 8px solid #F9CDAD;
     outline-offset: calc(25px - var(--a));
     transition: .4s;
 }
