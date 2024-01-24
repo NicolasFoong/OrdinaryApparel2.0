@@ -1,0 +1,108 @@
+/* Button Color Change Animation */
+.btn-primary {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Button Pulse Animation */
+.btn-primary:hover {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Add to Cart Button Styles */
+.btn-add-to-cart {
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Scale the button on hover */
+}
+
+
+/* Button Slide Animation */
+.btn-primary:hover {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Add a hover animation to buttons */
+.btn-primary:hover {
+  animation: btnHover 0.5s ease-in-out;
+}
+
+@keyframes btnHover {
+  transform: scale(1.1);
+}
+
+/* Header and Navbar Animations */
+header {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.navbar {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Form Elements Animation */
+form {
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Total Amount Animation */
+.pulse {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}

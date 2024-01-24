@@ -71,14 +71,35 @@ header {
   font-weight: normal;
 }
 
+/* Form Elements Animation */
+form {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add a hover effect to the form */
+form:hover {
+  transform: scale(1.05);
+}
+
+/* Checkbox Styles */
+.form-check-input {
+  margin-top: 5px;
+}
+
+.form-check-input:checked {
+  background-color: #007bff;
+}
+
 /* Button Styles */
 .btn-primary {
   background-color: #007bff;
   border: none;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
   background-color: #0056b3;
+  transform: scale(1.1);
 }
 
 /* Footer Styles */
