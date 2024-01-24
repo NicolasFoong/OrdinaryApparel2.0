@@ -12,8 +12,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/CSS/style.css">
 
-  <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
-  <script src="../Scripts/auth.js"></script>
+    <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
+    <script src="../Scripts/auth.js"></script>
 </head>
 
 <body>
@@ -51,25 +51,22 @@
                         </li>
                         <li class="nav-item dropdown">
                 </div>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-sm-2" type="search" placeholder="Search">
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            <button class="btn btn-warning d-none" id="logoutBtn" onclick="logout()">Logout</button>
-            <script>
-                const logoutBtn = document.getElementById("logoutBtn");
+                <form class="d-flex">
+                    <input class="form-control me-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <button class="btn btn-warning d-none" id="logoutBtn" onclick="logout()">Logout</button>
+                <script>
+                    const logoutBtn = document.getElementById("logoutBtn");
 
-                if (isLoggedIn()) {
-                    logoutBtn.classList.remove("d-none");
-                }
-            </script>
-          </div>
-        </div>
-      </nav>
-  </header>
-  <main>
+                    if (isLoggedIn()) {
+                        logoutBtn.classList.remove("d-none");
+                    }
+                </script>
+            </div>
+        </nav>
+    </header>
+    <main>
 
         <!--Container w/ bootstrap card-->
         <!--2 rows of 3 columns GRID SYSTEM-->
@@ -82,6 +79,43 @@
                     <div class="d-flex justify-content-center">
                         <div class="spinner-border" role="status">
                             <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="productModalLabel"></h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid shadow rounded" alt="product image" id="productImage">
+                                <div class="d-flex justify-content-between">
+                                    <p class="fs-3 mt-3" id="productPrice"></p>
+                                    <p id="productStock" class="fs-3 mt-3"></p>
+                                </div>
+
+                                <div id="productDescription" class="my-3 text-center"></div>
+                                <div id="productReviews">
+                                    <h6 class="text-center">Reviews</h6>
+                                    <form class="card" id="reviewForm">
+                                        <div class="card-body">
+                                            <textarea class="form-control mb-2" id="textarea" required></textarea>
+                                            <button class="btn btn-success" type="submit"
+                                                id="reviewButton">Submit</button>
+                                        </div>
+                                    </form>
+                                    <div class="row g-2 my-2" id="reviewContainer"></div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-dark fw-bold shadow">Add to Cart</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
