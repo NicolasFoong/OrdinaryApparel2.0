@@ -166,13 +166,10 @@ function addCommentToProduct(comment) {
   reviewContainer.insertAdjacentHTML('beforeend', commentHtml);
 }
 
-function addToCartBtn() {
-  const reviewContainer = document.getElementById('reviewContainer');
-  
-  // Redirect to the checkout page or handle cart logic here
+function redirectToCheckout() {
+  // Set the window location to the checkout page URL
   window.location.href = "/Pages/checkout.html";
 }
-
 // Array to store selected products
 let selectedProducts = [];
 
