@@ -105,18 +105,19 @@ body {
   }
 
 
-  #login-btn{
+  #loginButton{
     background-color: #a8c2bb;
     width: 100%;
     border-radius: 80px;
 
   }
-  #login-btn:hover{
+  #loginButton:hover{
     background-color: #88d3af;
     width: 100%;
     border-radius: 80px;
 
   }
+  
 
   .off {
     background: none;
