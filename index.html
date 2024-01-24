@@ -9,6 +9,7 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="/CSS/index.css">
 </head>
 <body>
   <header>
@@ -48,15 +49,34 @@
   </header>
   
   <main>
-    <div class="container px-4 text-center">
-      <div class="row gx-5">
-        <div class="col">
-          <h1>Embrace the Extraordinary in Being Ordinary</h1>
+    <h1>Embrace the Extraordinary in Being Ordinary</h1>
+     <!-- img carousel -->
+    <section>
+      <div id="img-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#img-carousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#img-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#img-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#img-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active hero-img">
+            <img src="Images/homepage/hero-images/clothes-hero-img.jpg" class="d-block w-100" alt="clothes-rack">
+          </div>
+          <div class="carousel-item hero-img">
+            <img src="Images/homepage/hero-images/shoes-hero-img.jpg" class="d-block w-100" alt="shoes-n-socks">
+          </div>
+          <div class="carousel-item hero-img">
+            <img src="Images/homepage/hero-images/bag-glasses-hero-img.jpg" class="d-block w-100" alt="bag-glasses">
+          </div>
+          <div class="carousel-item hero-img">
+            <img src="Images/homepage/hero-images/pants-white-shoes.jpg" class="d-block w-100" alt="bag-glasses">
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <section>
+    <!-- <section>
       <div class="container">
         <div class="row">
           <div class="col-md-6 mb-4">
@@ -68,9 +88,111 @@
           </div>
         </div>
       </div>
+    </section> -->
+
+     <!-- about -->
+     <section id="about" class="home-section">
+      <div class="home-text">
+        <h4 id="about-header">About Ordinary Apparel</h4>
+        <p class="p-1">Welcome to Ordinary Apparel. Here, you will find select pieces of Bay Area
+          <strong>DRIP</strong> that
+          will turn heads anywhere you go. All pieces have been curated from my personal collection, hence
+          displaying a reflection of my unique style and personality. Each piece tells a story and carries a
+          history of its own, making my wardrobe truly one-of-a-kind.</p>
+
+        <p class="p-2">Not only does thrift fashion allow me to be a trendsetter rather than a follower, but it's also an
+          eco-friendly choice. By giving pre-loved clothing a new life, I contribute to reducing textile waste
+          and my carbon footprint. The sustainability of thrifted fashion aligns with my values of being
+          conscious of the environment and making responsible choices.</p>
+      </div>
+      <div class="row m-auto ">
+        <div id="about-imgs">
+          <div class="row grid-imgs container m-auto">
+            <div id="about-img-1" class="grid-img col-lg-4 col-md-12">
+              <img
+              src="https://images.unsplash.com/photo-1615206036726-b7eba69bfb4c?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="office-fit">
+            </div>
+            <div id="about-img-2" class="grid-img col-lg-4 col-md-12">
+              <img
+                src="https://images.unsplash.com/photo-1520006403909-838d6b92c22e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="yellow-fit">
+             
+            </div>
+            <div id="about-img-3" class="grid-img col-lg-4 col-md-12">
+              <img
+                src="https://images.unsplash.com/photo-1530505580493-3fa88046af67?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="yellow-fit">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
+    <!-- Bay Area image gallery -->
+    <section class="bay">
+      <h4>Find Bay Area Favorites</h4>
+      <div id="img-gallery" class="row">
+        <div class="col-lg-3 col-md-12">
+          <img class="Drip-Check rounded" src="/Images/homepage/fit.jpg" alt="Drip Check">
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <img class="Drip-Check rounded" src="Images/homepage/49ersHome.jpg" alt="49ersHome">
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <img class="Drip-Check rounded" src="Images/homepage/YayArea.jpg" alt="jackets">
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <img class="Drip-Check rounded" src="https://127315472.cdn6.editmysite.com/uploads/1/2/7/3/127315472/s726499586514387208_p10197_i1_w800.png" alt="giants-jersey">
+        </div>
+      </div>
+
+      <div class="text-center m-5">
+        <a href="/Pages/products.html" class="btn btn-outline-primary">Shop Now</a>
+      </div>
+    </section>
+
+     <!-- stand out -->
+     <section id="stand-out" class="home-section">
+      <div class="home-text">
+        <h4 id="stand-out-header">How to Stand Out</h4>
+        <p class="p-1">Thrift shopping is an adventure in itself. I love the thrill of the hunt, the surprise of
+          finding
+          hidden gems, and the satisfaction of scoring high-quality items at a fraction of the price. It's a
+          treasure hunt that never gets old, and it gives me a sense of accomplishment that's hard to replicate
+          in traditional retail.</p>
+
+        <p class="p-2">In my thrifted fashion, I find pieces that aren't just clothes; they're pieces of art,
+          nostalgia, and
+          self-expression. Each outfit I put together tells a unique story, and it's a story that I'm proud to
+          wear every day. My thrift fashion is a testament to my individuality, my commitment to sustainability,
+          and my appreciation for the beauty of the past, all of which make it the best thrift fashion around.
+        </p>
+      </div>
+      <div class="row">
+        <div id="stand-out-imgs">
+          <div class="row grid-imgs container m-auto">
+            <div id="stand-out-img-1" class="grid-img col-lg-4 col-md-12">
+              <img
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="yellow-fit">
+            </div>
+            <div id="stand-out-img-2" class="grid-img col-lg-4 col-md-12">
+              <img
+                src="https://images.unsplash.com/photo-1573878593061-ed8c445d0af4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="office-fit">
+            </div>
+            <div id="stand-out-img-3" class="grid-img col-lg-4 col-md-12">
+              <img
+                src="https://images.unsplash.com/photo-1613053341085-db794820ce43?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="yellow-fit">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section>
       <div class="container-fluid">
         <div class="row gy-2">
           <div class="col-md-6 col-lg-6">
@@ -97,8 +219,8 @@
           </div>
         </div>
       </div>
-    </section>
-
+    </section> -->
+<!-- 
     <section>
       <div class="container">
         <div class="text-center">
@@ -108,7 +230,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
   
   <footer>
