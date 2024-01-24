@@ -21,7 +21,7 @@ body {
     left: 0;
     width: 50%;
     height: 100%;
-    background: #ffffff url(https://download.unsplash.com/photo-1428279148693-1cf2163ed67d);
+    background: #ffffff url(https://static.wixstatic.com/media/nsplsh_7476473457766a67734559~mv2_d_4080_2720_s_4_2.jpg/v1/fill/w_1653,h_1102,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/nsplsh_7476473457766a67734559~mv2_d_4080_2720_s_4_2.jpg);
     background-size: cover;
     background-position: 50% 50%;
   }
@@ -69,20 +69,20 @@ body {
   .content {
     width: 250px;
     margin: 0 auto;
-    top: 30%;
+    top: 15%;
     position: absolute;
     left: 50%;
     margin-left: -125px;
   }
   
   .content h2 {
-    color: #03A9F4;
-    font-weight: 300;
+    color: #4a4a4a;
+    font-weight: 600;
     font-size: 35px;
   }
   
   button {
-    background: #03A9F4;
+    background: #ddcea2;
     padding: 10px 16px;
     width: auto;
     font-weight: 600;
@@ -91,8 +91,8 @@ body {
     color: #fff;
     line-height: 16px;
     letter-spacing: 0.5px;
-    border-radius: 2px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    box-shadow: 2 2px 6px rgba(60, 60, 60, 0.1), 0 3px 6px rgba(0,0,0,0.1);
     border: 0;
     outline: 0;
     margin: 15px 15px 15px 0;
@@ -100,9 +100,27 @@ body {
   }
   
   button:hover {
-    background: #0288D1;
+    background: #88d3af;
     box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
   }
+
+
+  #login-btn{
+    background-color: #a8c2bb;
+    width: 100%;
+    border-radius: 80px;
+
+  }
+  #login-btn:hover{
+    background-color: #88d3af;
+    width: 100%;
+    border-radius: 80px;
+
+  }
+
+  
+  
+
   .off {
     background: none;
     color: #03A9F4;
@@ -128,4 +146,34 @@ body {
     color: #959595;
     padding: 8px 0;
     margin-top: 20px;
+    
+  }
+  
+ 
+ 
+
+  .bg-secondary{
+    background-color: #424a48 !important;
+    color: #a8c2bb;
+  }
+
+  .navbar-brand{
+    font-weight: 800;
+  }
+
+  h6,p,.my-3{
+    color: #959595;
+    font-weight: 200;
+  }
+
+  .form-label{
+    color:#787878;
+
+  }
+
+  .form-group>input{
+    border-bottom: 1px solid #c0c0c0;
+  }
+  .d-flex{
+    justify-content: center;
   }
