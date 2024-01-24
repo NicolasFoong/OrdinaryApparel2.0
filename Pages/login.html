@@ -10,7 +10,6 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="/CSS/login.css">
-  <script src="login.js"></script>
 
 </head>
 
@@ -67,33 +66,35 @@
         <div class="left">
           <div class="content">
             <h2>Sign Up</h2>
-            <form method="post" onsubmit="return false;">
+            
               <div class="form-group">
                 <input type="text" placeholder="username" />
               </div>
               <div class="form-group"></div>
               <div class="form-group"></div>
               <div class="form-group"></div>
-            </form>
-            <button id="goLeft" class="off">Login</button>
+            
+            <button>Login</button>
             <button>Sign up</button>
           </div>
         </div>
         <div class="right">
           <div class="content">
             <h2>Login</h2>
-            <form method="post" onsubmit="return false;">
+            
               <div class="form-group">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" />
                 <label for="password" class="form-label">Password</label>
                 <input type="password" />
               </div>
-              <a href="Pages/registration.html">
-                <button id="goRight" >Sign Up</button>
+              <a href="/Pages/registration.html">
+                <button>Sign Up</button>
               </a>
-              <button id="login" type="submit">Login</button>
-            </form>
+              <a href="index.html">
+              <button>Login</button>
+              </a>
+           
           </div>
         </div>
       </div>
