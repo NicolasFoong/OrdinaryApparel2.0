@@ -9,3 +9,17 @@ body{
   display: block; /* Make it a block element to take full width (optional) */
   margin: 0 auto; /* Auto margin on the left to push it to the right (optional) */
 }
+
+.bg-secondary{
+  background-color: #424a48 !important;
+  color: #a8c2bb;
+}
+
+.navbar-brand{
+  font-weight: 800;
+}
+
+h6,p,.my-3{
+  color: #959595;
+  font-weight: 200;
+}
