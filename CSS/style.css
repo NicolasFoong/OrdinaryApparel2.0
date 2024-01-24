@@ -1,11 +1,3 @@
-body{
-  background-image: url(/Images/notused/Abstract.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.button {
-  text-align: center; /* Align the text to the middle */
-  display: block; /* Make it a block element to take full width (optional) */
-  margin: 0 auto; /* Auto margin on the left to push it to the right (optional) */
+.content {
+  width: 400px;
 }
