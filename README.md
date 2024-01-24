@@ -6,6 +6,9 @@
 # Link to Page
 - https://github.com/NicolasFoong/Ordinary-Apparel
 
+### Back-end
+- https://github.com/icortes/OrdinaryApparel2.0-backend
+
 ## Page Descriptions
 ### 1. index.html 
 Index is the foundation Home Page that brings gives an overall understanding of what this brand is about. 
