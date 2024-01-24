@@ -61,19 +61,19 @@
       <hr>      
       <form action="process_checkout.php" method="POST">
            <!-- Content -->
-    <main class="container-md py-5">
+    <div class="container-md py-5">
       <section class="row g-5">
         <!-- Cart -->
         <div class="col-md-5 col-lg-4 order-md-last">
           <!-- Your Cart Text -->
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-primary">Shopping Cart</span>
-            <span class="badge bg-primary rounded-pill">3</span>
+            <span class="badge bg-primary rounded-pill" id="cartItemCount">3</span>
           </h4>
-          <!-- Items -->
-          <ul class="list-group mb-3">
-            <!--Vintage Disney x Nascar Jacket -->
-            <li class="list-group-item d-flex justify-content-between lh-sm">
+          <!-- Items List -->
+          <ul id="cartItems" class="list-group mb-3">
+            <!-- Vintage Disney x Nascar Jacket -->
+            <li class="list-group-item d-flex justify-content-between lh-sm" data-price="$150">
               <div class="d-flex gap-3">
                 <img
                   src="/Images/drip/Goofy.jpg"
@@ -87,7 +87,7 @@
               <span class="text-body-secondary my-auto">$150</span>
             </li>
             <!-- 90's Nike Urban Jungle -->
-            <li class="list-group-item d-flex justify-content-between lh-sm">
+            <li class="list-group-item d-flex justify-content-between lh-sm" data-price="$100">
               <div class="d-flex gap-3">
                 <img
                   src="/images/drip/UrbanJungleNike.jpg"
@@ -101,7 +101,7 @@
               <span class="text-body-secondary my-auto">$100</span>
             </li>
             <!-- 2000's Warriors Larry Hughes -->
-            <li class="list-group-item d-flex justify-content-between lh-sm">
+            <li class="list-group-item d-flex justify-content-between lh-sm" data-price="$125">
               <div class="d-flex gap-3">
                 <img
                   src="/images/drip/WarriorsJersey.jpg"
@@ -114,11 +114,11 @@
               </div>
               <span class="text-body-secondary my-auto">$125</span>
             </li>
-           
+
             <!-- Total -->
             <li class="list-group-item d-flex justify-content-between">
               <span>Total (USD)</span>
-              <strong>$375</strong>
+              <strong>$<span id="totalAmount">375.00</span></strong>
             </li>
           </ul>
         </div>
@@ -327,6 +327,7 @@
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="/Scripts/cart.js"></script>
 
 </body>
 

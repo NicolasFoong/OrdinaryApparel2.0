@@ -1,3 +1,4 @@
+
 body{
   background-image: url(/Images/notused/Abstract.jpg);
   background-repeat: no-repeat;
@@ -9,6 +10,7 @@ body{
   display: block; /* Make it a block element to take full width (optional) */
   margin: 0 auto; /* Auto margin on the left to push it to the right (optional) */
 }
+
 .bg-secondary{
   background-color: #424a48 !important;
   color: #a8c2bb;
@@ -23,3 +25,6 @@ h6,p,.my-3{
   font-weight: 200;
 }
 
+.content {
+  width: 400px;
+}
