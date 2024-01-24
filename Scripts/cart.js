@@ -19,10 +19,9 @@ function addToCart(name, price, image) {
     const newItem = { name, price, image };
     cartItems.push(newItem);
 
-    // Optionally, you can update the cart count or display a notification here
     updateCartCount();
 
-    // You might also want to store the cartItems in localStorage or send them to the server
+ 
 }
 
 function updateCartCount() {
