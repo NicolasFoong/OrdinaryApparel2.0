@@ -4,6 +4,14 @@ body {
   font-weight: normal;
 }
 
+.navbar-brand{
+  font-weight: 800;
+}
+
+h6,p,.my-3{
+  color: #959595;
+  font-weight: 200;
+}
 /* Spacing and Margins */
 .container-md {
   margin-top: 20px;
