@@ -12,6 +12,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/CSS/style.css">
 
+  <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
+  <script src="../Scripts/auth.js"></script>
 </head>
 
 <body>
@@ -49,17 +51,25 @@
                         </li>
                         <li class="nav-item dropdown">
                 </div>
-                </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-sm-2" type="search" placeholder="Search">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-            </div>
-        </nav>
-    </header>
-    <main>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-sm-2" type="search" placeholder="Search">
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <button class="btn btn-warning d-none" id="logoutBtn" onclick="logout()">Logout</button>
+            <script>
+                const logoutBtn = document.getElementById("logoutBtn");
+
+                if (isLoggedIn()) {
+                    logoutBtn.classList.remove("d-none");
+                }
+            </script>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <main>
 
         <!--Container w/ bootstrap card-->
         <!--2 rows of 3 columns GRID SYSTEM-->
